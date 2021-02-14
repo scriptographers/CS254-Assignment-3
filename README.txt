@@ -7,11 +7,16 @@ Team Members:
 File Descriptions:
 
 Q1:
+
     
 Q2:
     
 Q3:
+    TwoByOneMux.vhd   : 2x1 MUX using structural modelling
+    OnebitHalfAdd.vhd : One bit half adder made using only 2x1 MUXes
+    waveform.jpg      : Screenshot of the simulation results
     
-
 Q4:
-    
+    TwoByOneMux.vhd   : 2x1 MUX using structural modelling
+    OnebitFullAdd.vhd : One bit full adder made using only 2x1 MUXes
+    waveform.jpg      : Screenshot of the simulation results
