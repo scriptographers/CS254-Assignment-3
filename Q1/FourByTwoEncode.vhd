@@ -1,4 +1,4 @@
--- TOP MODULE FourByTwoEncode
+-- TOP MODULE: FourByTwoEncode
 library work;
 use work.all;
 
@@ -22,6 +22,7 @@ architecture Encode of FourByTwoEncode is
    end component;
 
 begin
+    -- This was made after constructing the ROBDD for each output
 
    mux_i3: TwoByOneMux
       port map (i(0) => '0', i(1) => en, sel => i(3), z => sig);

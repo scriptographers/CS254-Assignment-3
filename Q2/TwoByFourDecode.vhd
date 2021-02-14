@@ -1,4 +1,4 @@
--- TOP MODULE TwoByFourDecode
+-- TOP MODULE: TwoByFourDecode
 library work;
 use work.all;
 
@@ -22,12 +22,15 @@ architecture Decode of TwoByFourDecode is
    end component;
 
 begin
+    -- This was made after constructing the ROBDD for each output
 
+   -- Decoding based on i(1)
    mux1_0: TwoByOneMux
       port map (i(0) => en, i(1) => '0', sel => i(1), z => sig(0));
    mux1_1: TwoByOneMux
       port map (i(0) => '0', i(1) => en, sel => i(1), z => sig(1));
 
+   -- Decoding based on i(0)
    mux2_0: TwoByOneMux
       port map (i(0) => sig(0), i(1) => '0', sel => i(0), z => z(0));
    mux2_1: TwoByOneMux
