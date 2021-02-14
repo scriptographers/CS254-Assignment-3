@@ -13,6 +13,8 @@ end entity;
 
 architecture Encode of FourByTwoEncode is
 
+   signal sig: std_logic;
+
    component TwoByOneMux is
       port (i : in std_logic_vector(1 downto 0);
             sel : in std_logic;
@@ -20,5 +22,14 @@ architecture Encode of FourByTwoEncode is
    end component;
 
 begin
+
+   mux_i3: TwoByOneMux
+      port map (i(0) => '0', i(1) => en, sel => i(3), z => sig);
+
+   mux_i2: TwoByOneMux
+      port map (i(0) => sig, i(1) => en, sel => i(2), z => z(1));
+
+   mux_i1: TwoByOneMux
+      port map (i(0) => sig, i(1) => en, sel => i(1), z => z(0));
 
 end architecture;
