@@ -41,7 +41,7 @@ begin
 		
 	-- Carry
 	mux_b_0_c01: TwoByOneMux
-      port map (i(0) => '1', i(1) => c01, sel => b, z => b_0_c01);
+      port map (i(0) => '0', i(1) => c01, sel => b, z => b_0_c01);
 	
 	mux_b_c01_1: TwoByOneMux
       port map (i(0) => c01, i(1) => '1', sel => b, z => b_c01_1);
