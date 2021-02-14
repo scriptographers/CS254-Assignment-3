@@ -13,7 +13,7 @@ Q1:
 
 Q2:
     TwoByOneMux.vhd     : 2x1 MUX using structural modelling
-    TwoByFourDecode.vhd : One bit half adder made using only 2x1 MUXes
+    TwoByFourDecode.vhd : 2x4 Decoder made using only 2x1 MUXes
     waveform.jpg        : Screenshot of the simulation results
 
 Q3:
