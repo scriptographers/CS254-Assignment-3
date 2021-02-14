@@ -1,4 +1,4 @@
--- TOP MODULE OnebitHalfAdd
+-- TOP MODULE: OnebitHalfAdd
 library work;
 use work.all;
 
@@ -6,14 +6,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity OnebitHalfAdd is
-   port (
-		a, b : in std_logic;
-      sum, carry: out std_logic
-	);
+   port(
+	a, b : in std_logic;
+    sum, carry: out std_logic
+   );
 end entity;
 
 architecture HalfAdd of OnebitHalfAdd is
-		
+    
+    -- bxy denotes the output of the MUX with inputs as (x y) and selector as b
 	signal b01: std_logic;
 	signal b10: std_logic;
 	
@@ -24,6 +25,7 @@ architecture HalfAdd of OnebitHalfAdd is
    end component;
 
 begin
+    -- This was made after constructing the ROBDD for each output
 
 	-- Carry
 	mux_b01: TwoByOneMux

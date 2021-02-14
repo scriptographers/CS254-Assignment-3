@@ -12,6 +12,7 @@ end entity;
 
 architecture Decode of OnebitFullAdd is
 	
+      -- m_x_y/mxy denotes the output of the MUX with inputs as (x y) and selector as m
 	signal c01, c10, b_c01_c10, b_c10_c01, b_0_c01, b_c01_1: std_logic;
 	
    component TwoByOneMux is
@@ -21,7 +22,8 @@ architecture Decode of OnebitFullAdd is
    end component;
 
 begin
-	
+	-- This was designed using the ROBDDs
+
 	-- Sum
 	mux_c01: TwoByOneMux
       port map (i(0) => '0', i(1) => '1', sel => cin, z => c01);
