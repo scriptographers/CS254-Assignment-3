@@ -6,6 +6,8 @@ Team Members:
 
 File Descriptions:
 
+In all questions, we used ROBDDs to design the given circuit using 2x1 MUXes.
+
 Q1:
     TwoByOneMux.vhd     : 2x1 MUX using structural modelling
     FourByTwoEncode.vhd : 4x2 Encoder made using only 2x1 MUXes
